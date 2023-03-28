@@ -17,7 +17,7 @@ console.log(`La suma de los caracteres del array1 es ${sum2}, y es ${isEven(sum2
 
 
 let sum3 = array2.reduce((acumulacion, array2) => acumulacion + add(array2), 0);
-console.log(`La suma de los caracteres del array3 es ${sum3}, y es ${isEven(sum3) ? 'par' : 'impar'}. `);
+console.log(`La suma de los caracteres del array2 es ${sum3}, y es ${isEven(sum3) ? 'par' : 'impar'}. `);
 
 
 
