@@ -2,8 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var condicionales_1 = require("./condicionales");
 var buclesFor_1 = require("./buclesFor");
-console.log((0, buclesFor_1.add)(['Casa', 'Coche', 'Ciudad', 'Cesta']));
-(0, condicionales_1.isEven)(20);
 var array = ['Casa', 'Coche', 'Ciudad', 'Cesta'];
 var array1 = ['Barco', 'Baca', 'Bicicleta', 'Balon', 'Bisiesto', 'Brasil'];
 var array2 = ['Venezuela', 'Veneno', 'Voltaje'];
+var sum1 = array.reduce(function (acumulacion, array) { return acumulacion + (0, buclesFor_1.add)(array); }, 0);
+console.log("La suma de los caracteres del array es ".concat(sum1, ", y es ").concat((0, condicionales_1.isEven)(sum1) ? 'par' : 'impar', "."));
+var sum2 = array1.reduce(function (acumulacion, array1) { return acumulacion + (0, buclesFor_1.add)(array1); }, 0);
+console.log("La suma de los caracteres del array1 es ".concat(sum2, ", y es ").concat((0, condicionales_1.isEven)(sum2) ? 'par' : 'impar', ". "));
+var sum3 = array2.reduce(function (acumulacion, array2) { return acumulacion + (0, buclesFor_1.add)(array2); }, 0);
+console.log("La suma de los caracteres del array3 es ".concat(sum3, ", y es ").concat((0, condicionales_1.isEven)(sum3) ? 'par' : 'impar', ". "));
