@@ -49,6 +49,15 @@ var Point = /** @class */ (function () {
             return 4;
         }
     };
+    Point.prototype.calculateNearest = function (points) {
+        var arrObjeto = Point[0];
+        for (var i = 1; i < Point.length; i++) {
+            if (Point[i].calculateDistance(0, 0) < arrObjeto.calculateDistance(0, 0)) {
+                arrObjeto = Point[i];
+            }
+        }
+        return arrObjeto;
+    };
     return Point;
 }());
 exports.Point = Point;

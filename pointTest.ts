@@ -33,3 +33,7 @@ console.log(myPoint.calculateDistance(punto2));
 
 
 console.log(myPoint.calcularQuadrant(-2, -5));
+
+
+
+

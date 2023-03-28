@@ -28,13 +28,14 @@ export class Point {
     }
 
 
-
     distanceTolOrigin(): number {
         let x = this.x;
         let y = this.y;
       return  Math.sqrt(x*x + y*y);
+
     }
 
+    
     calculateDistance(anotherPoint:Point):number {
         let xDist = this.x - anotherPoint.x;
         let yDist = this.y - anotherPoint.y;
@@ -64,6 +65,20 @@ export class Point {
              return 4;
         }
     }
+
+     calculateNearest(points : Point[]) : Point {
+
+        let arrObjeto = Point[0];
+
+        for(let i = 1; i < Point.length; i++){
+          if(Point[i].calculateDistance(0,0) < arrObjeto.calculateDistance(0,0)){
+            arrObjeto = Point[i];
+          }
+        }
+           return arrObjeto;
+     }
+
 }
+
 
 
