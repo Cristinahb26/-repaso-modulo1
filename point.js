@@ -31,6 +31,24 @@ var Point = /** @class */ (function () {
         var yDist = this.y - anotherPoint.y;
         return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
     };
+    Point.prototype.calcularQuadrant = function (x, y) {
+        if (x == 0 || y == 0) {
+            return 0;
+        }
+        else if (x > 0 && y > 0) {
+            return 1;
+        }
+        else if (x < 0 && y > 0) {
+            return 2;
+        }
+        else if (x < 0 && y < 0) {
+            return 3;
+        }
+        else {
+            x > 0 && y < 0;
+            return 4;
+        }
+    };
     return Point;
 }());
 exports.Point = Point;
